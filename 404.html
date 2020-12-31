@@ -47,7 +47,7 @@
             var url = document.createElement("a");
             url.setAttribute("href", title);
 
-            if(title)
+            if(!title.indexOf("http"))
               location.replace(title);
             else
               location.replace(homepage);
