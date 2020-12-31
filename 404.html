@@ -48,18 +48,8 @@
             var url = document.createElement("a");
             url.setAttribute("href", title);
 
-            // Invalid URLs includes invalid issue numbers, issue titles that are not URLs, and recursive destination URLs
-            var isInvalidUrl =
-              message === "Not Found" ||
-              !title ||
-              !isUrl(title) ||
-              url.hostname === location.hostname;
 
-            if (isInvalidUrl) {
-              location.replace(homepage);
-            } else {
-              location.replace(title);
-            }
+            location.replace(title);
           } catch (e) {
             location.replace(homepage);
           }
