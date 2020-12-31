@@ -47,8 +47,10 @@
             var url = document.createElement("a");
             url.setAttribute("href", title);
 
-
-            location.replace(title);
+            if(title)
+              location.replace(title);
+            else
+              location.replace(homepage);
           } catch (e) {
             location.replace(homepage);
           }
